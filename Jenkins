@@ -9,7 +9,7 @@ stage('vsc')
   }
   stage('archive')
   {
-  junit 'gameoflife-web/target/surefire-rports/*.xml'
   archive 'gameoflife-web/target/gameoflife.war'
+  junit 'gameoflife-web/target/surefire-rports/*.xml'
   }
 }
