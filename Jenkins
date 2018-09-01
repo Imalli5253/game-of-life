@@ -7,9 +7,9 @@ stage('vsc')
   {
   sh 'mvn package'
   }
-  stage('archive')
+  stage('archiveArtifacts')
   {
   archive 'gameoflife-web/target/gameoflife.war'
-  junit 'gameoflife-web/target/surefire-rports/*.xml'
+  junit 'gameoflife-web/target/surefire-reports/*.xml'
   }
 }
