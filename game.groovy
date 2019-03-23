@@ -9,6 +9,13 @@ triggers{
 steps {
 	shell('mvn -e clean test')
 	shell('mvn package')
-	archive 'gameoflife-web/target/gameoflife.war'
+//	archive 'gameoflife-web/target/gameoflife.war'
 	}
+publishers {
+        archiveArtifacts {
+            pattern('gameoflife-web/target/gameoflife.war')
+          //  pattern('build/test-output/**/*.xml')
+            onlyIfSuccessful()
+        }
+    }
 }
