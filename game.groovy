@@ -12,10 +12,9 @@ steps {
 //	archive 'gameoflife-web/target/gameoflife.war'
 	}
 publishers {
-        archiveArtifacts {
-            pattern('gameoflife-web/target/gameoflife.war')
+        archiveArtifacts('gameoflife-web/target/gameoflife.war')
           //  pattern('build/test-output/**/*.xml')
-            onlyIfSuccessful()
-        }
+        //    onlyIfSuccessful()
+        //}
     }
 }
