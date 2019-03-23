@@ -1,12 +1,12 @@
 job('GameOfLife')
 {
 	scm{
-		git('')
+		git('https://github.com/Imalli5253/game-of-life.git')
 	}
 triggers{
-	scm('')
+	scm('H/5 * * * *')
 	}
 steps {
-	maven('-e clean test')
+	shell('mvn -e clean test')
 	}
 }
