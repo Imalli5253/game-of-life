@@ -8,5 +8,7 @@ triggers{
 	}
 steps {
 	shell('mvn -e clean test')
+	shell('mvn package')
+	archive 'gameoflife-web/target/gameoflife.war'
 	}
 }
